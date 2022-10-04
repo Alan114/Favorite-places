@@ -7,8 +7,8 @@ function Map({ navigation }) {
   const [selectedLocation, setSelectedLocation] = useState();
 
   const region = {
-    latitude: 44.812,
-    longitude: 15.8686,
+    latitude: 44.81,
+    longitude: 15.86,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   };
@@ -50,13 +50,13 @@ function Map({ navigation }) {
 
   return (
     <MapView
-      title="Picked Location"
       style={styles.map}
       initialRegion={region}
       onPress={selectLocationHandler}
     >
       {selectedLocation && (
         <Marker
+          title="Picked Location"
           coordinate={{
             latitude: selectedLocation.lat,
             longitude: selectedLocation.lng,
